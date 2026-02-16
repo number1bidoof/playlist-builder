@@ -10,6 +10,8 @@ import java.util.*;
  * Demonstrates: Maps for counting, sorting by value, file I/O, user interaction
  * 
  * TODO: Fill in the main method to complete this program.
+ *
+ * @author Ayah Abdalla
  */
 public class PlaylistBuilder {
 
@@ -18,7 +20,7 @@ public class PlaylistBuilder {
         // Key: song title (String)
         // Value: play count (Integer)
         // ============================================
-        Map<String, Integer> songCount = null;  // REPLACE WITH: new HashMap<>()
+        Map<String, Integer> songCount = new HashMap<>();
         // ============================================
 
         // TODO 2: Read the playlist file and count song frequencies
@@ -26,7 +28,7 @@ public class PlaylistBuilder {
         // Use Scanner to read song titles (one per line)
         // The filename is "sample_playlist.txt"
         // ============================================
-        try (Scanner scanner = new Scanner(new File("test.txt"))) {
+        try (Scanner scanner = new Scanner(new File("untitled/src/sample_playlist.txt"))) {
             while (scanner.hasNextLine()) {
                 String song = scanner.nextLine().trim();
                 
@@ -46,7 +48,7 @@ public class PlaylistBuilder {
 
             }
         } catch (FileNotFoundException e) {
-            System.out.println("Error: File 'test.txt' not found!");
+            System.out.println("Error: File 'sample_playlist.txt' not found!");
             return;
         }
 
